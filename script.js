@@ -31,7 +31,9 @@ function daysAvailable(month){
 
 function determineSign(month,day) {
     if((month==1 && day<=19)|| (month==12 && day>=22)){
-        return " You are a Capricorn!";
+        return " You are a Capricorn! This is a great day to plan new projects. Your mind may be especially quick and "+
+            "full of ideas. These could prove valuable. Write down ideas that you can't put to immediate use so you " +
+            "won't forget them. Books, magazines, conversations, and the Internet may be rich sources of inspiration.";
     }
     if((month==1 && day>=20) || (month==2 && day<=18) ){
         return "You are an Aquarius! "
@@ -67,4 +69,8 @@ function determineSign(month,day) {
     if((month==11 && day>=22)|| (month==12 && day<=21)){
         return " You are a Sagittarius!";
     }
+}
+
+function determineImage(sign){
+
 }

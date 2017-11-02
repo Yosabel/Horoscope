@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <title>title</title>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+
 </head>
 <body onload="daysAvailable(1)">
+What is your name?
+<input type="text" id="myField" value="" size="25">
 What month were you born?
 <select id="month" onchange="daysAvailable(this.value)">
     <option value="1">January</option>
