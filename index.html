@@ -9,7 +9,12 @@
 </head>
 <body onload="daysAvailable(1)">
 What is your name?
-<input type="text" id="myField" value="" size="25">
+<input type="text" id="name" value="" size="25">
+
+<div id="image"></div>
+<!--<img src="img/taurus.jpg">-->
+
+
 What month were you born?
 <select id="month" onchange="daysAvailable(this.value)">
     <option value="1">January</option>
@@ -72,5 +77,4 @@ what year were you born?
 <button id="submit" onclick="onSubmit()">submit</button>
 <div id="sign"></div>
 </body>
-
 </html>

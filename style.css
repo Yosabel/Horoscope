@@ -1,5 +1,38 @@
+
 body {
-    font-family: Georgia;
+    font-family: Impact;
     vertical-align: bottom;
-    background:blue;
+
+}
+
+button {
+    width: 30px;
+    color: black;
+}
+
+/* style the element with the id “myId” */
+background {
+    background:  mediumpurple;
+}
+
+/*style all elements with the class “fontLarge” */
+.fontLarge{
+    font-size: 20px;
+}
+
+/* style all p elements with the class “center” */
+p.center {
+    text-align: center;
+    color: red;
+}
+
+/* style all h1, h2 and p elements */
+h1, h2, p {
+    text-align: right;
+    text-weight: bold;
+}
+
+
+
+
 }
