@@ -1,11 +1,15 @@
 //signsArray = ["Aquarius", ...]
 
 function onSubmit(){
-   var month= document.getElementById("month").value;
-   var day= document.getElementById("day").value;
+    var month= parseInt(document.getElementById("month").value);
+    var day= parseInt(document.getElementById("day").value);
+    console.log(month);
+    console.log(day);
    var sign= determineSign(month,day);
    document.getElementById("sign").innerHTML=sign;
-   determineBirthday(month,day);
+    document.getElementById("birthday").innerHTML=determineBirthday(month,day);
+
+
 
 }
 
@@ -23,12 +27,12 @@ function daysAvailable(month){
 
     if(month==1 || month== 3 || month==5 || month==7 || month== 8 || month==10 || month==12){
         for(var i= 1; i<=31; i++){
-            document.getElementById("day").innerHTML += "<option value=''" + i + "'>" +i + "</option>";
+            document.getElementById("day").innerHTML += "<option value='" + i + "'>" +i + "</option>";
         }
     }
     if(month==4 || month==6 || month==9 || month==11){
         for(var i=1; i<=30; i++){
-            document.getElementById("day").innerHTML += "<option value=''" + i + "'>" +i + "</option>";
+            document.getElementById("day").innerHTML += "<option value='" + i + "'>" +i + "</option>";
         }
     }
 }
@@ -126,25 +130,19 @@ function determineSign(month,day) {
     }
 }
 
-// function determineImage(sign){
-//
-//     document.getElementById("image").innerHTML='<img src="img/' + signsArray[sign] + '.jpeg">';
-//
-// }
-
-// function determineMessage(sign) {
-//     if(sign==1) {
-//         return message OR
-//          document.getElementById("image").innerHTML = the message
-//     }
-// }
 
 function determineBirthday(month, day) {
 
     var today = new Date();
-    // https://www.w3schools.com/jsref/jsref_obj_date.asp
+    newMonth=today.getMonth();
+    newDay=today.getDate();
 
-    if(today.getMonth() == month && today.getDate() == day)
-document.getElementById("birthday").innerHTML= "Happy Birthday";
+    if(newMonth-1 == month && newDay == day){
+        return "Enjoy your Birthday!"
+    }else{
+        return "";
+    }
+
+
 
 }
