@@ -1,9 +1,11 @@
+//signsArray = ["Aquarius", ...]
+
 function onSubmit(){
    var month= document.getElementById("month").value;
    var day= document.getElementById("day").value;
    var sign= determineSign(month,day);
    document.getElementById("sign").innerHTML=sign;
-
+   determineBirthday(month,day);
 
 }
 
@@ -39,11 +41,15 @@ function daysAvailable(month){
 function determineSign(month,day) {
     var name= document.getElementById("name").value;
     if((month==1 && day<=19)|| (month==12 && day>=22)){
+        //return 0
+        document.getElementById("image").innerHTML='<img src="img/capricorn.jpeg">'
         return name + " you are a Capricorn! " + "This is a great day to plan new projects. Your mind may be especially " +
             "quick and full of ideas. These could prove valuable. Write down ideas that you can't put to immediate use so you " +
             "won't forget them. Books, magazines, conversations, and the Internet may be rich sources of inspiration.";
+
     }
     if((month==2 && day>=19)|| (month==3 && day<=20)){
+        document.getElementById("image").innerHTML='<img src="img/capricorn.jpeg">'
         return name + " you are a Pisces! " + "Your intuition has been especially high for a while now. Today you could decide to " +
             "put it to practical use. You might consider a class or workshop that increases your ability to communicate." +
             " New friends who share this interest could appear on the scene. Whatever ideas or insights come your way" +
@@ -107,5 +113,26 @@ function determineSign(month,day) {
 }
 
 // function determineImage(sign){
+//
+//     document.getElementById("image").innerHTML='<img src="img/' + signsArray[sign] + '.jpeg">';
+//
+// }
+
+// function determineMessage(sign) {
+//     if(sign==1) {
+//         return message OR
+//          document.getElementById("image").innerHTML = the message
+//     }
+// }
+
+// function determineBirthday(month, day) {
+//
+//     var today = new Date();
+//
+//     // https://www.w3schools.com/jsref/jsref_obj_date.asp
+//
+//     if(today.getMonth() == month && today.getDay() == day)
+//document.getElementById("birthday").innerHTML= "happy birthday";
+//
 //
 // }
