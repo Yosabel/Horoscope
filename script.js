@@ -21,7 +21,7 @@ function daysAvailable(month){
     if(month==2){
         for(var i= 1; i<=29; i++){
 
-            document.getElementById("day").innerHTML += "<option value=''" + i + "'>" +i + "</option>";
+            document.getElementById("day").innerHTML += "<option value='" + i + "'>" +i + "</option>";
         }
     }
 
@@ -38,8 +38,11 @@ function daysAvailable(month){
 }
 
 function determineSign(month,day) {
+    console.log(month);
+    console.log(day);
     var name= document.getElementById("name").value;
     if((month==1 && day<=19)|| (month==12 && day>=22)){
+
         document.getElementById("image").innerHTML='<img src="img/capricorn.jpeg">';
         return name + " you are a Capricorn! " + "This is a great day to plan new projects. Your mind may be especially " +
             "quick and full of ideas. These could prove valuable. Write down ideas that you can't put to immediate use so you " +
@@ -47,6 +50,7 @@ function determineSign(month,day) {
 
     }
     if((month==1 && day>=20) || (month==2 && day<=18) ){
+
         document.getElementById("image").innerHTML='<img src="img/Aquarius.jpeg">';
         return name + " you are an Aquarius! Your mind could be especially active today. Perhaps you'll discover a new talent " +
             "you didn't know you had, such as writing, drawing or speaking. Ideas for stories, sketches, or lectures " +
@@ -55,7 +59,9 @@ function determineSign(month,day) {
 
     }
 
-    if((month==2 && day>=19)&& (month==3 && day<=20)){
+    if((month==2 && day>=19) || (month==3 && day<=20)){
+        console.log(month);
+        console.log(day);
         document.getElementById("image").innerHTML='<img src="img/pisces.jpeg">';
         return name + " you are a Pisces! Your intuition has been especially high for a while now. Today you could decide to " +
             "put it to practical use. You might consider a class or workshop that increases your ability to communicate." +
@@ -132,13 +138,13 @@ function determineSign(month,day) {
 
 
 function determineBirthday(month, day) {
-
+    var name= document.getElementById("name").value;
     var today = new Date();
     var newMonth=today.getMonth();
     var newDay=today.getDate();
 
     if(newMonth == month-1 && newDay == day){
-        return "Enjoy your Birthday!"
+        return "Enjoy your birthday " + name + "!";
     }else{
         return " ";
     }

@@ -1,10 +1,9 @@
 
 body {
-    font-family: "Apple Chancery";
+    font-family:"Euphemia UCAS";
     vertical-align: bottom;
     background: lightskyblue;
     text-align:center;
-
 }
 
 button {
@@ -15,7 +14,7 @@ button {
 
 /*style all elements with the class “fontLarge” */
 .fontLarge{
-    font-size: 30px;
+    font-size: 60px;
 }
 
 /* style all p elements with the class “center” */
